@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-28",
+  "tests": {
+    "command": "python -X utf8 -B -m pytest tests -q -p no:cacheprovider",
+    "passed": 77,
+    "warnings": 4,
+    "elapsed_seconds": 14.03,
+    "environment": "new isolated .venv; CPU torch 2.10.0+cpu",
+    "warning_reason": "pre-norm Transformer disables nested-tensor optimization"
+  },
+  "original_files_hashed_and_unchanged": 687,
+  "historical_results_hashed_and_unchanged": 169,
+  "unreadable_source_files": "one active PowerPoint lock file; not copied or modified",
+  "privacy_scan": {
+    "filename_findings": [],
+    "sensitive_text_findings": [],
+    "numeric_substring_matches": 37,
+    "non_numeric_substring_findings": []
+  },
+  "core_src_files_unchanged": true,
+  "training_performed": false,
+  "experiments_rerun": false,
+  "original_test_split_evaluated": false,
+  "ppt_included": false,
+  "archived_model_query_protocol": "unmasked joint self-attention; query features can interact; query labels excluded",
+  "publication_status": "prepared for user review; no commit or remote publication"
+}

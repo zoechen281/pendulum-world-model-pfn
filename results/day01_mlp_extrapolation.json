@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-13",
+  "script": "scripts/day01_evaluate_extrapolation.py",
+  "code_sha256": {
+    "scripts/day01_evaluate_extrapolation.py": "b870c0eefee8196f1edbb162b2f96db523a47d0be42d1c43600a3ace20e24f1f",
+    "src/day01_regression.py": "9e8d028d84c0fc8d7c3ecfa8ac2e86da2746a2dd65042345e7982fbe0c8b6d97"
+  },
+  "checkpoint_record": "results/day01_mlp_lr001_run.json",
+  "checkpoint_record_sha256": "ee3daabe0b352783ebfea73f5a27e09efa82d38b68fde2b434552cb3a5518de2",
+  "input": 5.0,
+  "target": 66.0,
+  "prediction": 36.696598052978516,
+  "extrapolation_mse": 858.6893920898438,
+  "absolute_error": 29.303401947021484,
+  "relative_absolute_error": 0.4439909385912346,
+  "parameters_unchanged": true,
+  "retraining": false,
+  "training_range": [
+    -2.0,
+    2.0
+  ],
+  "evaluation_scope": "One predetermined extrapolation input x=5. Not representative of all out-of-range inputs or other models."
+}

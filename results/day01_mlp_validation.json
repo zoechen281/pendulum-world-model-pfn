@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-13",
+  "script": "scripts/day01_evaluate_mlp.py",
+  "code_sha256": {
+    "scripts/day01_evaluate_mlp.py": "94b0704504a5822c05985deb58821f0547c15c5f6cc7049d572447bd3d3ade48",
+    "src/day01_regression.py": "9e8d028d84c0fc8d7c3ecfa8ac2e86da2746a2dd65042345e7982fbe0c8b6d97"
+  },
+  "checkpoint_record": "results/day01_mlp_lr001_run.json",
+  "checkpoint_record_sha256": "ee3daabe0b352783ebfea73f5a27e09efa82d38b68fde2b434552cb3a5518de2",
+  "python": "3.11.15",
+  "torch": "2.10.0+cpu",
+  "device": "cpu",
+  "dtype": "float32",
+  "val_inputs": [
+    [
+      -1.5
+    ],
+    [
+      -0.5
+    ],
+    [
+      0.5
+    ],
+    [
+      1.5
+    ]
+  ],
+  "val_targets": [
+    [
+      1.0
+    ],
+    [
+      0.0
+    ],
+    [
+      3.0
+    ],
+    [
+      10.0
+    ]
+  ],
+  "predictions": [
+    [
+      1.6397799253463745
+    ],
+    [
+      -0.19849947094917297
+    ],
+    [
+      3.3324718475341797
+    ],
+    [
+      10.742938041687012
+    ]
+  ],
+  "squared_errors": [
+    [
+      0.40931835770606995
+    ],
+    [
+      0.03940204158425331
+    ],
+    [
+      0.11053752899169922
+    ],
+    [
+      0.5519569516181946
+    ]
+  ],
+  "validation_mse": 0.2778037190437317,
+  "checkpoint_training_mse": 0.43820104002952576,
+  "parameters_unchanged": true,
+  "training_points_overlap": false,
+  "retraining": false,
+  "evaluation_scope": "Four predetermined unseen interpolation inputs within [-2,2], no noise. Not a broad test of generalization or extrapolation."
+}

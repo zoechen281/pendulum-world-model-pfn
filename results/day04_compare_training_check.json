@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac",
+  "script_sha256": "6bdf7d9d45fb8fbc891d34894a6141b2acf53d5cbb6c0516c8921ccd6c6739ba",
+  "dataset_sha256": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+  "protocol": "one update on train episode0 start0 H2; recursive evaluation on val episode0 start0 H2",
+  "optimizer": "SGD",
+  "learning_rate": 0.01,
+  "updates_per_group": 1,
+  "baseline_val_two_step_mse": 0.0018921238370239735,
+  "groups": {
+    "A": {
+      "val_two_step_mse": 0.0023135982919484377,
+      "delta_vs_baseline": 0.0004214744549244642
+    },
+    "B": {
+      "val_two_step_mse": 0.003399719251319766,
+      "delta_vs_baseline": 0.0015075954142957926
+    }
+  },
+  "elapsed_seconds_total": 1.703700400001253,
+  "checkpoint_unchanged": true,
+  "updated_weights_saved": false,
+  "test_evaluated": false,
+  "scope": "one training window and one validation window only"
+}

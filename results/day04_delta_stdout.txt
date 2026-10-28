@@ -1,0 +1,5 @@
+Epoch 0, training MSE before update: 0.207790
+Epoch 50, training MSE before update: 0.096119
+Epoch 100, training MSE before update: 0.084273
+Epoch 150, training MSE before update: 0.074549
+0.07442060112953186

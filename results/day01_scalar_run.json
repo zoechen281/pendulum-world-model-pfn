@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-13",
+  "script": "scripts/day01_train_scalar.py",
+  "task": "minimize (w - 3)^2 with one scalar parameter",
+  "device": "cpu",
+  "dtype": "float32",
+  "optimizer": "SGD with default momentum and weight_decay",
+  "learning_rate": 0.1,
+  "initial_w": 1.0,
+  "updates": 10,
+  "randomness": "no random initialization or sampling in this script",
+  "losses_before_each_update": [
+    4.0,
+    2.56000018119812,
+    1.6383999586105347,
+    1.0485758781433105,
+    0.671088695526123,
+    0.429496705532074,
+    0.2748778462409973,
+    0.1759217381477356,
+    0.11258985102176666,
+    0.07205747812986374
+  ],
+  "final_w_after_ten_updates": 2.7852518558502197,
+  "note": "Recorded from actual script stdout. Last logged loss precedes the tenth update; not a regression-model or world-model experiment."
+}

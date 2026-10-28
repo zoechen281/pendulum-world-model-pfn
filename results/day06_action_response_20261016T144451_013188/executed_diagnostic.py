@@ -1,0 +1,44 @@
+"""同一状态、同一动作的单步诊断；一个转移不能解释整个控制回合。"""
+import hashlib
+import json
+from pathlib import Path
+import gymnasium as gym
+import numpy as np
+import torch
+from src.day04_world_model import DynamicsMLP, predict_next_observation
+
+def main(torque: float=1.0, env_seed: int=100):
+    root = Path(__file__).resolve().parents[1]
+    checkpoint_path = root / 'results/day04_delta_normalized_run.json'
+    checkpoint_bytes = checkpoint_path.read_bytes()
+    checkpoint_hash = hashlib.sha256(checkpoint_bytes).hexdigest()
+    record = json.loads(checkpoint_bytes.decode('utf-8'))
+    torch.set_num_threads(1)
+    model = DynamicsMLP()
+    model.load_state_dict({name: torch.tensor(values, dtype=torch.float32) for name, values in record['final_state_dict'].items()})
+    model.eval()
+    input_mean = torch.tensor(record['input_mean'], dtype=torch.float32)
+    input_std = torch.tensor(record['input_std'], dtype=torch.float32)
+    env = gym.make('Pendulum-v1')
+    try:
+        observation, info = env.reset(seed=env_seed)
+        observation_tensor = torch.tensor(observation, dtype=torch.float32).reshape(1, 3)
+        action = np.array([torque], dtype=np.float32)
+        action_tensor = torch.tensor(action, dtype=torch.float32).reshape(1, 1)
+        assert env.action_space.contains(action)
+        with torch.no_grad():
+            predicted_next = predict_next_observation(model, observation_tensor, action_tensor, input_mean, input_std)
+        next_observation, reward, terminated, truncated, info = env.step(action)
+        next_observation_tensor = torch.tensor(next_observation, dtype=torch.float32).reshape(1, 3)
+        print('Predicted next observation:', predicted_next)
+        print('True next observation:', next_observation_tensor)
+        squared_errors = (predicted_next - next_observation_tensor) ** 2
+        mse = squared_errors.mean()
+        print('Squared errors:', squared_errors)
+        print('Mean squared error:', mse)
+        assert hashlib.sha256(checkpoint_path.read_bytes()).hexdigest() == checkpoint_hash
+    finally:
+        env.close()
+    return dict(initial_observation=observation_tensor.tolist()[0], action=action.tolist(), predicted_next=predicted_next.tolist()[0], true_next=next_observation_tensor.tolist()[0], squared_errors=squared_errors.tolist()[0], mse=float(mse.item()))
+if __name__ == '__main__':
+    main()

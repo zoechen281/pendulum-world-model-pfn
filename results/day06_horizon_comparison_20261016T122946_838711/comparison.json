@@ -1,0 +1,119 @@
+{
+  "recorded_at": "2026-10-16T12:29:47.466088+08:00",
+  "source_sha256": {
+    "scripts\\day06_run_mpc_check.py": "86a18baa846ef5a691699ee993ea3f0f9e55e91335e9f190ca20564addb5e3bb",
+    "src\\day06_mpc.py": "af388692f69803176ff9cadf0a13b53937fc006b7d52b7ab6f7e9ece4b16779f",
+    "src\\day04_world_model.py": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+    "scripts\\day06_archive_comparison.py": "9316deb0ad47959a3a28629322b23f87c623633086f91309fc1f3aa5afab9cce"
+  },
+  "checkpoint_sha256": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac",
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.4.6",
+    "gymnasium": "1.4.0"
+  },
+  "protocol": {
+    "env": "Pendulum-v1",
+    "env_seeds": [
+      100,
+      101,
+      102
+    ],
+    "horizons": [
+      3,
+      5
+    ],
+    "num_candidates": 20,
+    "max_steps": 200,
+    "planner_sampling_seed": 0,
+    "random_action_seed": 0,
+    "torch_threads": 1,
+    "device": "cpu",
+    "reward": "sum of actual environment rewards",
+    "discount": 1.0
+  },
+  "execution": "Copied runner AST; changed horizon constant and appended statistics return only; original __file__ retained for checkpoint lookup.",
+  "checkpoint_unchanged": true,
+  "training_performed": false,
+  "test_dataset_evaluated": false,
+  "limitations": [
+    "Three development environment seeds only; one action sampling seed.",
+    "Different horizons change sampled sequences and computation budget.",
+    "Wall times include both policies and logging; not an isolated latency benchmark."
+  ],
+  "runs": [
+    {
+      "mpc_return": -1572.2602133602834,
+      "random_return": -1327.140389356269,
+      "mpc_steps": 200,
+      "horizon": 3,
+      "env_seed": 100,
+      "delta_mpc_minus_random": -245.1198240040144,
+      "random_steps": 200,
+      "elapsed_seconds": 0.08545630000025994,
+      "stdout": "h3_env100_stdout.txt",
+      "executed_source_sha256": "25a2bb27fbdb695b7c88b0be00b126ce0e808019f54f9ac22325c62b197e4bd8"
+    },
+    {
+      "mpc_return": -1545.4864324961627,
+      "random_return": -1542.926696464216,
+      "mpc_steps": 200,
+      "horizon": 3,
+      "env_seed": 101,
+      "delta_mpc_minus_random": -2.5597360319466134,
+      "random_steps": 200,
+      "elapsed_seconds": 0.07521409999935713,
+      "stdout": "h3_env101_stdout.txt",
+      "executed_source_sha256": "25a2bb27fbdb695b7c88b0be00b126ce0e808019f54f9ac22325c62b197e4bd8"
+    },
+    {
+      "mpc_return": -1561.7089591144481,
+      "random_return": -1457.9081544705507,
+      "mpc_steps": 200,
+      "horizon": 3,
+      "env_seed": 102,
+      "delta_mpc_minus_random": -103.80080464389744,
+      "random_steps": 200,
+      "elapsed_seconds": 0.07734459999937826,
+      "stdout": "h3_env102_stdout.txt",
+      "executed_source_sha256": "25a2bb27fbdb695b7c88b0be00b126ce0e808019f54f9ac22325c62b197e4bd8"
+    },
+    {
+      "mpc_return": -1468.699584103523,
+      "random_return": -1327.140389356269,
+      "mpc_steps": 200,
+      "horizon": 5,
+      "env_seed": 100,
+      "delta_mpc_minus_random": -141.55919474725397,
+      "random_steps": 200,
+      "elapsed_seconds": 0.11208890000034444,
+      "stdout": "h5_env100_stdout.txt",
+      "executed_source_sha256": "8655931307505559874f2a2aae1f81d63f737ea08741a09c3c527b8307c60f54"
+    },
+    {
+      "mpc_return": -1593.6615958091315,
+      "random_return": -1542.926696464216,
+      "mpc_steps": 200,
+      "horizon": 5,
+      "env_seed": 101,
+      "delta_mpc_minus_random": -50.73489934491545,
+      "random_steps": 200,
+      "elapsed_seconds": 0.10875570000007428,
+      "stdout": "h5_env101_stdout.txt",
+      "executed_source_sha256": "8655931307505559874f2a2aae1f81d63f737ea08741a09c3c527b8307c60f54"
+    },
+    {
+      "mpc_return": -1431.5307942137856,
+      "random_return": -1457.9081544705507,
+      "mpc_steps": 200,
+      "horizon": 5,
+      "env_seed": 102,
+      "delta_mpc_minus_random": 26.377360256765087,
+      "random_steps": 200,
+      "elapsed_seconds": 0.10744569999951636,
+      "stdout": "h5_env102_stdout.txt",
+      "executed_source_sha256": "8655931307505559874f2a2aae1f81d63f737ea08741a09c3c527b8307c60f54"
+    }
+  ]
+}

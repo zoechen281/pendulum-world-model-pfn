@@ -1,0 +1,22 @@
+{
+  "env_seeds": [
+    100,
+    101
+  ],
+  "source_sha256": {
+    "scripts\\day10_inspect_selected_plan.py": "c8426d160afa195c5497f0dcef31a5fb94516dfceee6f193c2ca2cc7f79d78bd",
+    "src\\day04_world_model.py": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+    "src\\day06_mpc.py": "af388692f69803176ff9cadf0a13b53937fc006b7d52b7ab6f7e9ece4b16779f",
+    "results\\day04_delta_normalized_run.json": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac"
+  },
+  "checkpoint": "results/day04_delta_normalized_run.json",
+  "horizon": 5,
+  "num_candidates": 20,
+  "sampling_seed": 0,
+  "training_performed": false,
+  "test_evaluated": false,
+  "versions": {
+    "torch": "2.10.0+cpu",
+    "gymnasium": "1.4.0"
+  }
+}

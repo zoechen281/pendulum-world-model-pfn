@@ -1,0 +1,19 @@
+{
+  "completed_episodes": 39,
+  "real_steps": 7800,
+  "oracle_simulated_transitions": 6600000,
+  "trajectory_lengths_verified": true,
+  "total_rewards_recomputed": true,
+  "source_sha256_verified": {
+    "scripts\\day10_oracle_mpc.py": "029104a57e38e857c52adddffd442e1019a1ee36c5a15186aa1505f9704f7b91",
+    "src\\day04_world_model.py": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+    "src\\day06_mpc.py": "af388692f69803176ff9cadf0a13b53937fc006b7d52b7ab6f7e9ece4b16779f",
+    "docs\\TEACHING_PLAN_REVISED.md": "7eb063c6e08cc76ca06f53b0f972c74a22a75e9b3b5d9cef1ee77cdb7621e524",
+    "results\\day03_pendulum_dataset.json": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+    "results\\day10_convergence_20261017T221844_116308\\best_weights.json": "2a4012bdd8f17dd63a9761e95d6906c02a73b00266a246dbec77f55dc0018112",
+    "results\\day10_convergence_20261017T221844_116308\\config.json": "5cb41fa2e189a6f4b1a40056b3b02d48293161f29b35b2b3a100bebcc3730546"
+  },
+  "paired_candidates_verified": true,
+  "training_performed": false,
+  "test_evaluated": false
+}

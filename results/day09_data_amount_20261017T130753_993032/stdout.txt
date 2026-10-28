@@ -1,0 +1,5 @@
+small: samples=200, train MSE=0.058253, val MSE=0.048068
+small: training seconds=0.080968
+full: samples=1200, train MSE=0.059071, val MSE=0.071855
+full: training seconds=0.174606
+ARCHIVE: D:\workspace\world_model_ra_14days\results\day09_data_amount_20261017T130753_993032\comparison.json

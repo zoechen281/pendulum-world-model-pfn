@@ -1,0 +1,215 @@
+{
+  "protocol": "Independent reset to same seed before every torque; one real step, no clipping/repair of model prediction.",
+  "env_seeds": [
+    100,
+    101
+  ],
+  "torques": [
+    -1,
+    0,
+    1
+  ],
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.4.6",
+    "gymnasium": "1.4.0"
+  },
+  "source_sha256": "7377333bf823614fa457c028b55d81855d8f484a1051ffc29a73e745abfd9571",
+  "core_source_sha256": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+  "checkpoint_sha256": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac",
+  "checkpoint_unchanged": true,
+  "training_performed": false,
+  "test_dataset_evaluated": false,
+  "execution": "Appended statistics return to copied main AST only; original __file__ retained for checkpoint lookup.",
+  "runs": [
+    {
+      "initial_observation": [
+        -0.5089420676231384,
+        0.8608008027076721,
+        0.19310805201530457
+      ],
+      "action": [
+        -1.0
+      ],
+      "predicted_next": [
+        -0.4520106613636017,
+        0.9289717078208923,
+        0.35499101877212524
+      ],
+      "true_next": [
+        -0.5382765531539917,
+        0.8427682518959045,
+        0.6887086629867554
+      ],
+      "squared_errors": [
+        0.007441804278641939,
+        0.007431035861372948,
+        0.11136746406555176
+      ],
+      "mse": 0.0420801006257534,
+      "env_seed": 100,
+      "torque": -1.0,
+      "stdout": "env100_torque-1_stdout.txt"
+    },
+    {
+      "initial_observation": [
+        -0.5089420676231384,
+        0.8608008027076721,
+        0.19310805201530457
+      ],
+      "action": [
+        0.0
+      ],
+      "predicted_next": [
+        -0.4511500298976898,
+        0.9033851027488708,
+        0.42848244309425354
+      ],
+      "true_next": [
+        -0.5445820689201355,
+        0.8387075662612915,
+        0.8387086391448975
+      ],
+      "squared_errors": [
+        0.008729546330869198,
+        0.004183183889836073,
+        0.16828553378582
+      ],
+      "mse": 0.06039942428469658,
+      "env_seed": 100,
+      "torque": 0.0,
+      "stdout": "env100_torque+0_stdout.txt"
+    },
+    {
+      "initial_observation": [
+        -0.5089420676231384,
+        0.8608008027076721,
+        0.19310805201530457
+      ],
+      "action": [
+        1.0
+      ],
+      "predicted_next": [
+        -0.4473227858543396,
+        0.869109034538269,
+        0.4910670518875122
+      ],
+      "true_next": [
+        -0.5508570075035095,
+        0.8345996141433716,
+        0.9887086153030396
+      ],
+      "squared_errors": [
+        0.010719334706664085,
+        0.0011909001041203737,
+        0.24764712154865265
+      ],
+      "mse": 0.08651912212371826,
+      "env_seed": 100,
+      "torque": 1.0,
+      "stdout": "env100_torque+1_stdout.txt"
+    },
+    {
+      "initial_observation": [
+        -0.9377174973487854,
+        0.3473988175392151,
+        -0.2811579406261444
+      ],
+      "action": [
+        -1.0
+      ],
+      "predicted_next": [
+        -0.9180480241775513,
+        0.3385768234729767,
+        -0.3302524983882904
+      ],
+      "true_next": [
+        -0.9347199201583862,
+        0.3553852438926697,
+        -0.17060881853103638
+      ],
+      "squared_errors": [
+        0.0002779521164484322,
+        0.00028252298943698406,
+        0.02548610419034958
+      ],
+      "mse": 0.008682193234562874,
+      "env_seed": 101,
+      "torque": -1.0,
+      "stdout": "env101_torque-1_stdout.txt"
+    },
+    {
+      "initial_observation": [
+        -0.9377174973487854,
+        0.3473988175392151,
+        -0.2811579406261444
+      ],
+      "action": [
+        0.0
+      ],
+      "predicted_next": [
+        -0.9192097187042236,
+        0.342374324798584,
+        -0.21308866143226624
+      ],
+      "true_next": [
+        -0.9373589754104614,
+        0.3483648896217346,
+        -0.02060881443321705
+      ],
+      "squared_errors": [
+        0.0003293955232948065,
+        3.588686740840785e-05,
+        0.03704849258065224
+      ],
+      "mse": 0.012471258640289307,
+      "env_seed": 101,
+      "torque": 0.0,
+      "stdout": "env101_torque+0_stdout.txt"
+    },
+    {
+      "initial_observation": [
+        -0.9377174973487854,
+        0.3473988175392151,
+        -0.2811579406261444
+      ],
+      "action": [
+        1.0
+      ],
+      "predicted_next": [
+        -0.8793659210205078,
+        0.32638853788375854,
+        -0.15864071249961853
+      ],
+      "true_next": [
+        -0.9399453401565552,
+        0.34132498502731323,
+        0.12939119338989258
+      ],
+      "squared_errors": [
+        0.0036698661278933287,
+        0.00022309744963422418,
+        0.08296237885951996
+      ],
+      "mse": 0.02895178087055683,
+      "env_seed": 101,
+      "torque": 1.0,
+      "stdout": "env101_torque+1_stdout.txt"
+    }
+  ],
+  "responses": [
+    {
+      "env_seed": 100,
+      "predicted_velocity_span": 0.13607603311538696,
+      "true_velocity_span": 0.2999999523162842,
+      "zero_torque_velocity_error": -0.4102261960506439
+    },
+    {
+      "env_seed": 101,
+      "predicted_velocity_span": 0.17161178588867188,
+      "true_velocity_span": 0.30000001192092896,
+      "zero_torque_velocity_error": -0.1924798469990492
+    }
+  ]
+}

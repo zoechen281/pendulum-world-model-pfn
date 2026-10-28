@@ -1,0 +1,5 @@
+small: samples=200, train MSE=0.000006, val MSE=0.000769
+small: training seconds=1.445024
+full: samples=1200, train MSE=0.000038, val MSE=0.000294
+full: training seconds=2.325307
+ARCHIVE: D:\workspace\world_model_ra_14days\results\day10_day09_adam_20261018T103015_801539\comparison.json

@@ -1,0 +1,79 @@
+ARCHIVE: D:\workspace\world_model_ra_14days\results\day10_oracle_20261018T110145_857569
+[1/39] start {'mode': 'random', 'env_seed': 100, 'num_candidates': 0, 'horizon': 0}
+[1/39] return=-1327.140389, hold=0, success=False, seconds=0.01
+[2/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 20, 'horizon': 5}
+[2/39] return=-1288.398146, hold=0, success=False, seconds=0.13
+[3/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 20, 'horizon': 5}
+[3/39] return=-1218.098582, hold=0, success=False, seconds=0.19
+[4/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 200, 'horizon': 5}
+[4/39] return=-1258.619920, hold=0, success=False, seconds=0.16
+[5/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 200, 'horizon': 5}
+[5/39] return=-1138.559167, hold=0, success=False, seconds=2.63
+[6/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 20, 'horizon': 15}
+[6/39] return=-364.490757, hold=101, success=True, seconds=0.46
+[7/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 20, 'horizon': 15}
+[7/39] return=-240.770473, hold=142, success=True, seconds=0.71
+[8/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 200, 'horizon': 15}
+[8/39] return=-239.101602, hold=149, success=True, seconds=0.49
+[9/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 200, 'horizon': 15}
+[9/39] return=-238.131855, hold=153, success=True, seconds=6.37
+[10/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 20, 'horizon': 30}
+[10/39] return=-603.778877, hold=93, success=True, seconds=0.66
+[11/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 20, 'horizon': 30}
+[11/39] return=-601.217819, hold=94, success=True, seconds=1.40
+[12/39] start {'mode': 'learned', 'env_seed': 100, 'num_candidates': 200, 'horizon': 30}
+[12/39] return=-243.221166, hold=154, success=True, seconds=1.00
+[13/39] start {'mode': 'oracle', 'env_seed': 100, 'num_candidates': 200, 'horizon': 30}
+[13/39] return=-243.351960, hold=153, success=True, seconds=12.97
+[14/39] start {'mode': 'random', 'env_seed': 101, 'num_candidates': 0, 'horizon': 0}
+[14/39] return=-1542.926696, hold=0, success=False, seconds=0.01
+[15/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 20, 'horizon': 5}
+[15/39] return=-1516.859574, hold=0, success=False, seconds=0.17
+[16/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 20, 'horizon': 5}
+[16/39] return=-1616.765690, hold=0, success=False, seconds=0.23
+[17/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 200, 'horizon': 5}
+[17/39] return=-1553.310790, hold=0, success=False, seconds=0.21
+[18/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 200, 'horizon': 5}
+[18/39] return=-1553.346392, hold=0, success=False, seconds=2.25
+[19/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 20, 'horizon': 15}
+[19/39] return=-501.134801, hold=115, success=True, seconds=0.48
+[20/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 20, 'horizon': 15}
+[20/39] return=-504.471940, hold=110, success=True, seconds=0.69
+[21/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 200, 'horizon': 15}
+[21/39] return=-392.241657, hold=132, success=True, seconds=0.60
+[22/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 200, 'horizon': 15}
+[22/39] return=-378.950145, hold=135, success=True, seconds=6.50
+[23/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 20, 'horizon': 30}
+[23/39] return=-779.677337, hold=80, success=True, seconds=0.63
+[24/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 20, 'horizon': 30}
+[24/39] return=-637.736184, hold=102, success=True, seconds=1.35
+[25/39] start {'mode': 'learned', 'env_seed': 101, 'num_candidates': 200, 'horizon': 30}
+[25/39] return=-492.739816, hold=118, success=True, seconds=1.04
+[26/39] start {'mode': 'oracle', 'env_seed': 101, 'num_candidates': 200, 'horizon': 30}
+[26/39] return=-485.857868, hold=120, success=True, seconds=12.57
+[27/39] start {'mode': 'random', 'env_seed': 102, 'num_candidates': 0, 'horizon': 0}
+[27/39] return=-1457.908154, hold=0, success=False, seconds=0.02
+[28/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 20, 'horizon': 5}
+[28/39] return=-1288.548639, hold=0, success=False, seconds=0.25
+[29/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 20, 'horizon': 5}
+[29/39] return=-1221.820760, hold=0, success=False, seconds=0.25
+[30/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 200, 'horizon': 5}
+[30/39] return=-1264.594665, hold=0, success=False, seconds=0.25
+[31/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 200, 'horizon': 5}
+[31/39] return=-1148.836929, hold=0, success=False, seconds=2.24
+[32/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 20, 'horizon': 15}
+[32/39] return=-246.415696, hold=152, success=True, seconds=0.38
+[33/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 20, 'horizon': 15}
+[33/39] return=-245.429357, hold=154, success=True, seconds=0.65
+[34/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 200, 'horizon': 15}
+[34/39] return=-246.086569, hold=151, success=True, seconds=0.51
+[35/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 200, 'horizon': 15}
+[35/39] return=-243.016460, hold=154, success=True, seconds=6.62
+[36/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 20, 'horizon': 30}
+[36/39] return=-369.854255, hold=76, success=True, seconds=0.75
+[37/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 20, 'horizon': 30}
+[37/39] return=-243.336185, hold=152, success=True, seconds=1.50
+[38/39] start {'mode': 'learned', 'env_seed': 102, 'num_candidates': 200, 'horizon': 30}
+[38/39] return=-242.167713, hold=155, success=True, seconds=0.97
+[39/39] start {'mode': 'oracle', 'env_seed': 102, 'num_candidates': 200, 'horizon': 30}
+[39/39] return=-364.703389, hold=132, success=True, seconds=13.21

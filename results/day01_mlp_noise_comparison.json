@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-14",
+  "protocol": "Same four unseen interpolation inputs and clean targets; restored saved weights; no retraining",
+  "inputs": [
+    -1.5,
+    -0.5,
+    0.5,
+    1.5
+  ],
+  "targets": [
+    1.0,
+    0.0,
+    3.0,
+    10.0
+  ],
+  "results": {
+    "clean": {
+      "validation_mse": 0.2778037190437317,
+      "predictions": [
+        1.6397799253463745,
+        -0.19849947094917297,
+        3.3324718475341797,
+        10.742938041687012
+      ]
+    },
+    "noisy": {
+      "validation_mse": 0.2829854190349579,
+      "predictions": [
+        1.7666198015213013,
+        -0.3747212886810303,
+        3.115370512008667,
+        10.624907493591309
+      ]
+    }
+  },
+  "noisy_parameters_unchanged": true,
+  "executed": "Only learner-written validation assignments via AST, not full training script",
+  "script_sha256": "87f5a13533843fadda51af6d5a2022896d6b53e4a50c98465c2d82fada0e33ab",
+  "torch": "2.10.0+cpu"
+}

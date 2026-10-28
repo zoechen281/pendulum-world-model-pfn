@@ -1,0 +1,4 @@
+Predicted next observation: tensor([[-0.4473,  0.8691,  0.4911]])
+True next observation: tensor([[-0.5509,  0.8346,  0.9887]])
+Squared errors: tensor([[0.0107, 0.0012, 0.2476]])
+Mean squared error: tensor(0.0865)

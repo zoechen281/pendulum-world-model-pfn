@@ -1,0 +1,13 @@
+{
+  "model_val_mse": 0.27018001675605774,
+  "persistence_val_mse": 0.12043102085590363,
+  "persistence_val_mse_per_dimension": [
+    0.02821967378258705,
+    0.025438910350203514,
+    0.30763447284698486
+  ],
+  "num_transitions": 400,
+  "dataset_sha256": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+  "parameters_unchanged": true,
+  "test_evaluated": false
+}

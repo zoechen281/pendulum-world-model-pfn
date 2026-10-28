@@ -1,0 +1,5 @@
+step 1: mean MSE=0.070589
+step 5: mean MSE=1.463546
+step 10: mean MSE=4.647229
+step 20: mean MSE=11.726207
+ARCHIVE: D:\workspace\world_model_ra_14days\results\day09_prediction_horizons_20261017T132148_538443\comparison.json

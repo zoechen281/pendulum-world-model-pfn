@@ -1,0 +1,50 @@
+{
+  "adam": {
+    "seed": 0,
+    "learning_rate": 0.001,
+    "max_updates": 5000,
+    "min_updates": 1000,
+    "eval_every": 50,
+    "patience_checks": 10,
+    "min_delta": 1e-05,
+    "meaningful_relative_reduction": 0.2,
+    "meaningful_absolute_reduction": 0.001
+  },
+  "optimizer": "Adam",
+  "device": "cpu",
+  "threads": 1,
+  "data_counts": {
+    "train": 1200,
+    "val": 400
+  },
+  "test_evaluated": false,
+  "input_mean": [
+    [
+      -0.37099897861480713,
+      -0.0108031602576375,
+      0.2515626549720764,
+      0.06458038091659546
+    ]
+  ],
+  "input_std": [
+    [
+      0.6465315818786621,
+      0.6665132641792297,
+      3.5036721229553223,
+      1.1433451175689697
+    ]
+  ],
+  "source_sha256": {
+    "scripts\\day10_convergence_check.py": "0abb444b7327d79d582672eea7bd39b42e7fbfe8e7f06c7c61be4b4713904156",
+    "src\\day04_world_model.py": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+    "results\\day03_pendulum_dataset.json": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+    "results\\day04_delta_normalized_run.json": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac",
+    "results\\day09_data_amount_20261017T130753_993032\\comparison.json": "f5b46a02594e6bf9a983db3300a53796a99b975f22d00f08b65553575befac99"
+  },
+  "initial_state_sha256": "dcd840d1ab58288e9630a31ee8914f339388f4a8fc14102614ee1799ea2e5f02",
+  "initialization_evidence": "seed0 architecture/config; exact match to saved Day9 initial state; Day4 initial state unavailable",
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu"
+  }
+}

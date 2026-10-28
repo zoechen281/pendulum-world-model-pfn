@@ -1,0 +1,10 @@
+baseline: parameters=4675
+baseline: final training MSE=0.000037
+baseline: final validation MSE=0.000310
+baseline: component MSE=[4.202495620120317e-05, 4.53233442385681e-05, 0.000842285982798785]
+baseline: mean circle error=0.010142
+structured: parameters=4545
+structured: final training MSE=0.000003
+structured: final validation MSE=0.000011
+structured: component MSE=[3.4527623427038634e-08, 4.57939357545456e-08, 3.2128020393429324e-05]
+structured: mean circle error=0.000000

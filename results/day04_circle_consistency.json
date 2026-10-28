@@ -1,0 +1,10 @@
+{
+  "source_checkpoint": "results/day04_delta_normalized_run.json",
+  "evaluation_only": true,
+  "num_transitions": 400,
+  "val_mse": 0.05504319444298744,
+  "mean_circle_error": 0.08710366487503052,
+  "max_circle_error": 0.24111419916152954,
+  "parameters_unchanged": true,
+  "test_evaluated": false
+}

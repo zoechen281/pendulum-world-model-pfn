@@ -1,0 +1,2 @@
+Two-step loss before update: 0.077990
+PASS: finite gradients and parameters updated

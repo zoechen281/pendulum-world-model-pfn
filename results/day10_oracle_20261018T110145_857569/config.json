@@ -1,0 +1,296 @@
+{
+  "recorded_at": "2026-10-18T11:01:45.857569+08:00",
+  "config": {
+    "horizons": [
+      5,
+      15,
+      30
+    ],
+    "candidate_counts": [
+      20,
+      200
+    ],
+    "environment_seeds": [
+      100,
+      101,
+      102
+    ],
+    "sampling_seed": 0,
+    "random_action_seed": 0,
+    "max_real_steps": 200,
+    "upright_angle": 0.2,
+    "upright_speed": 1.0,
+    "hold_steps": 20
+  },
+  "budget": {
+    "episodes": 39,
+    "real_steps_max": 7800,
+    "oracle_simulated_transitions_max": 6600000
+  },
+  "cases": [
+    {
+      "mode": "random",
+      "env_seed": 100,
+      "num_candidates": 0,
+      "horizon": 0
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "learned",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 100,
+      "num_candidates": 200,
+      "horizon": 30
+    },
+    {
+      "mode": "random",
+      "env_seed": 101,
+      "num_candidates": 0,
+      "horizon": 0
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "learned",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 101,
+      "num_candidates": 200,
+      "horizon": 30
+    },
+    {
+      "mode": "random",
+      "env_seed": 102,
+      "num_candidates": 0,
+      "horizon": 0
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 5
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 15
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 20,
+      "horizon": 30
+    },
+    {
+      "mode": "learned",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 30
+    },
+    {
+      "mode": "oracle",
+      "env_seed": 102,
+      "num_candidates": 200,
+      "horizon": 30
+    }
+  ],
+  "source_sha256": {
+    "scripts\\day10_oracle_mpc.py": "029104a57e38e857c52adddffd442e1019a1ee36c5a15186aa1505f9704f7b91",
+    "src\\day04_world_model.py": "7d8648a08a8a55a8e5875a9d8fe0469300d640c6c3a1ec0ca80ac2048abb895e",
+    "src\\day06_mpc.py": "af388692f69803176ff9cadf0a13b53937fc006b7d52b7ab6f7e9ece4b16779f",
+    "docs\\TEACHING_PLAN_REVISED.md": "7eb063c6e08cc76ca06f53b0f972c74a22a75e9b3b5d9cef1ee77cdb7621e524",
+    "results\\day03_pendulum_dataset.json": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+    "results\\day10_convergence_20261017T221844_116308\\best_weights.json": "2a4012bdd8f17dd63a9761e95d6906c02a73b00266a246dbec77f55dc0018112",
+    "results\\day10_convergence_20261017T221844_116308\\config.json": "5cb41fa2e189a6f4b1a40056b3b02d48293161f29b35b2b3a100bebcc3730546"
+  },
+  "learned_checkpoint": "results/day10_convergence_20261017T221844_116308",
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.4.6",
+    "gymnasium": "1.4.0"
+  },
+  "device": "cpu",
+  "torch_threads": 1,
+  "discount": 1.0,
+  "terminal_value": 0.0,
+  "candidate_pairing": "NumPy SeedSequence([sampling_seed, real_step]); shared (200,30,1) bank prefixes",
+  "success_rule": "post-action real states: abs(wrapped theta)<0.2 and abs(omega)<1 for >=20 consecutive steps",
+  "interpretation_rules": [
+    "Oracle failure supports insufficiency of this planning setting/budget in this case, not a unique cause.",
+    "Oracle success and learned failure supports dynamics error as a limiting factor for this paired setting.",
+    "Both succeed does not establish exact learned dynamics; mixed outcomes must be retained.",
+    "Three development seeds and one sampling seed do not prove generalization."
+  ],
+  "training_performed": false,
+  "test_evaluated": false
+}

@@ -1,0 +1,21 @@
+{
+  "checkpoint": "results/day04_delta_normalized_run.json",
+  "checkpoint_sha256": "0547fcf5fec07a79b151932114de7673f60dcef61dd673de2ecde464049ab6ac",
+  "script_sha256": "ab06bce9888b065c533290f396fae79d0b7018429ae2eeb829324f12b36e0ecb",
+  "dataset_sha256": "79d93d980304e0f024612c414b2e9d9e5e4828c81c9fef00cb9e6f2d693554b6",
+  "split": "train",
+  "episode_index": 0,
+  "start": 0,
+  "horizon": 2,
+  "updates": 1,
+  "optimizer": "SGD",
+  "learning_rate": 0.01,
+  "loss_before_update": 0.0779898464679718,
+  "finite_gradients": true,
+  "parameters_changed": true,
+  "max_parameter_absolute_change": 0.005145400762557983,
+  "checkpoint_file_unchanged": true,
+  "validation_evaluated": false,
+  "test_evaluated": false,
+  "updated_weights_saved": false
+}
