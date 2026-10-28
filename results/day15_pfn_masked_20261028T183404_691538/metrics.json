@@ -1,0 +1,63 @@
+{
+ "config": {
+  "attention_protocol": "prefix_only_mask; K=0 uses one prior token",
+  "seed": 0,
+  "device": "cpu",
+  "threads": 1,
+  "model": {
+   "d_model": 64,
+   "n_heads": 4,
+   "n_layers": 2
+  },
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "num_steps": 3000,
+  "batch_size": 64,
+  "num_query": 16,
+  "noise_std": 0.02,
+  "train_context_sizes": [
+   0,
+   1,
+   2,
+   4,
+   8,
+   16
+  ],
+  "note": "K=32 留给评估，训练采样不含32"
+ },
+ "elapsed_seconds": 94.97485566139221,
+ "num_parameters": 71558,
+ "first_losses": [
+  1.071355938911438,
+  0.8941358327865601,
+  0.8211178779602051,
+  0.6290563941001892,
+  0.5019897818565369,
+  0.33175963163375854,
+  0.1687529981136322,
+  0.05820199474692345,
+  0.1851370632648468,
+  -0.02578333579003811
+ ],
+ "last_losses": [
+  -1.613929271697998,
+  -2.147939443588257,
+  -2.0059688091278076,
+  -1.1861791610717773,
+  -1.8802554607391357,
+  -0.6810950040817261,
+  -1.9606804847717285,
+  -1.050654411315918,
+  -2.008826971054077,
+  -2.103179693222046
+ ],
+ "final_loss": -2.103179693222046,
+ "min_loss": -2.1934974193573,
+ "source_sha256": {
+  "scripts/day15_train_pfn_masked.py": "20fe1193c563efc7a64c3c9cbab914457c91aa201e1de50635c1f81edddafebc",
+  "src/day15_pfn_model.py": "f3a6c7ed57b0aa1db8eff9100f6a3b893eed356b9869b8d23a75e4cf2dee419a",
+  "src/day15_pfn_model_masked.py": "32d1373aa86058e072f97b601fe9217b0121226093621c030d8ce886304ee308",
+  "src/day15_pfn_prior.py": "aad0f778b5bb1cfb8cce6f0bdb98d093450af3bb50b807dfed94a495804b5f83"
+ },
+ "test_evaluated": false
+}

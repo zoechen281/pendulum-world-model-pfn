@@ -1,6 +1,7 @@
 """Day15 汇报PPT生成（导师辅助）：数字取自 results/ 中 JSON，不手抄。"""
 
 import json
+import sys
 from pathlib import Path
 
 from pptx import Presentation
@@ -22,8 +23,8 @@ def load(relpath):
 
 
 BASE = load("results/day15_baseline_20261027T231622_013858/metrics.json")
-EVAL = load("results/day15_eval_20261028T162911_018421/metrics.json")
-PFN = load("results/day15_pfn_20261028T162639_073060/metrics.json")
+EVAL = load("results/day15_eval_masked_20261028T183604_691086/metrics.json")
+PFN = load("results/day15_pfn_masked_20261028T183404_691538/metrics.json")
 DAY8 = load("results/day10_day08_adam_20261018T102005_973952/comparison.json")
 DAY9B = load("results/day10_day09_horizons_20261018T103223_004434/comparison.json")
 
@@ -34,6 +35,7 @@ BLANK = PRS.slide_layouts[6]
 
 
 def _text(frame, text, size=20, bold=False, color=DARK, bullet=False, level=0):
+    frame.word_wrap = True
     para = frame.add_paragraph()
     para.level = level
     run = para.add_run()
@@ -47,8 +49,8 @@ def _text(frame, text, size=20, bold=False, color=DARK, bullet=False, level=0):
 
 def title_slide(title, subtitle):
     slide = PRS.slides.add_slide(BLANK)
-    box = slide.shapes.add_textbox(Inches(1), Inches(2.6), Inches(11.3), Inches(2))
-    _text(box.text_frame, title, 40, bold=True)
+    box = slide.shapes.add_textbox(Inches(1), Inches(2.2), Inches(11.3), Inches(2.8))
+    _text(box.text_frame, title, 36, bold=True)
     _text(box.text_frame, subtitle, 22, color=BLUE)
     return slide
 
@@ -57,8 +59,14 @@ def content_slide(title, bullets, image=None):
     slide = PRS.slides.add_slide(BLANK)
     box = slide.shapes.add_textbox(Inches(0.5), Inches(0.35), Inches(12.3), Inches(0.9))
     _text(box.text_frame, title, 30, bold=True)
-    if image:
-        box = slide.shapes.add_textbox(Inches(0.6), Inches(1.35), Inches(5.4), Inches(5.9))
+    if image and "day15_eval_masked_" in image:
+        box = slide.shapes.add_textbox(Inches(0.6), Inches(1.25), Inches(12.0), Inches(1.65))
+        for item in bullets:
+            para = _text(box.text_frame, item[0], 15, bullet=True, level=item[1])
+            para.space_after = Pt(4)
+        slide.shapes.add_picture(str(ROOT / image), Inches(1.1), Inches(3.0), width=Inches(11.0))
+    elif image:
+        box = slide.shapes.add_textbox(Inches(0.6), Inches(1.35), Inches(4.9), Inches(5.9))
         for b in bullets:
             p = _text(box.text_frame, b[0], 15, bullet=True, level=b[1])
             p.space_after = Pt(6)
@@ -78,7 +86,9 @@ b = lambda t, lvl=0: (t, lvl)
 # ---------- 数据（取自JSON） ----------
 mlp_mse = EVAL["rows"][0]["fixed_mlp"]["mse"]
 bayes_k32 = next(r for r in EVAL["rows"] if r["K"] == 32)
-pfn_k32 = bayes_k32["pfn"]
+pfn_k32 = bayes_k32["pfn_masked"]
+old_pfn_k32 = bayes_k32["pfn_unmasked"]
+pfn_coverages = [r["pfn_masked"]["coverage90"] for r in EVAL["rows"]]
 bayes_k32 = bayes_k32["bayes"]
 mlp_cov = EVAL["rows"][0]["fixed_mlp"]["coverage90"]
 
@@ -86,8 +96,8 @@ day8_plain = DAY8["groups"]["baseline"]["validation_mse"]
 day8_phys = DAY8["groups"]["structured"]["validation_mse"]
 
 # ---------- 幻灯片 ----------
-title_slide("单摆世界模型：从固定动力学学到上下文自适应预测",
-            "IMDS｜2026-10-30")
+title_slide("单摆世界模型：\n从固定动力学到上下文自适应预测",
+            "2026-10-30")
 
 content_slide("问题与方法", [
     b("任务：从 Pendulum-v1 交互数据学习状态转移，再做模型预测控制（MPC）"),
@@ -119,7 +129,7 @@ content_slide("统计层面的教训", [
 
 content_slide("动机：换物理参数就要重新训练吗？", [
     b("现有 MLP 只学了默认单摆（a=15, b=3，对应 g=10, m=1, l=1）"),
-    b("换一个摆长或质量 → 动力学变了 → 需要重新采集数据、重新训练"),
+    b("换一个摆长或质量 → 动力学改变；固定模型缺少利用新任务上下文的机制"),
     b("PFN 的想法：把每个物理参数组合当成一个“任务”，从先验采样训练一个能就地推断的模型"),
     b("使用时：给少量上下文转移 → 一次前向 → 直接输出预测分布，不再训练"),
 ])
@@ -127,16 +137,17 @@ content_slide("动机：换物理参数就要重新训练吗？", [
 content_slide("PFN 设置", [
     b("任务先验：a~N(15,3²), b~N(3,0.75²)；模型为 y = dt·(a·sinθ + b·u) + ε，ε~N(0,0.02²)"),
     b("上下文 token = [sinθ, u, y, 1]；查询 token = [sinθ, u, 0, 0]；2 层 Transformer（d=64, 4 头）+ 高斯头输出 mean、log_var"),
+    b("掩码：上下文和查询的注意力只读上下文；K=0 时只读先验 token，查询之间独立"),
     b("损失：高斯 NLL；每步从先验现采 64 个任务；训练 K∈{0,1,2,4,8,16}，K=32 留作评估"),
-    b("对照：已知模型形式的精确贝叶斯后验（闭式）= 上界参照"),
+    b("对照：已知模型形式的精确贝叶斯后验预测（闭式参照）"),
 ])
 
 content_slide("结果：预测误差随上下文下降", [
-    b(f"K=32：PFN {pfn_k32['mse']:.2e}，贝叶斯 {bayes_k32['mse']:.2e}，噪声下限 4.0e-4"),
-    b(f"固定 MLP 不随 K 变化：{mlp_mse:.2e}（约为 PFN 的 25 倍）"),
-    b("覆盖率：PFN 0.92–0.96（略保守）、贝叶斯 ≈0.90、固定 MLP 0.28（过度自信）"),
+    b(f"K=32：掩码 PFN {pfn_k32['mse']:.2e}，旧版 {old_pfn_k32['mse']:.2e}；贝叶斯 {bayes_k32['mse']:.2e}"),
+    b(f"固定 MLP {mlp_mse:.2e}，噪声方差 4.0e-4；掩码版本次误差略高于旧版"),
+    b(f"掩码 PFN 覆盖率 {min(pfn_coverages):.2f}–{max(pfn_coverages):.2f}，偏保守；固定 MLP (+σ²) {mlp_cov:.2f}"),
 ],
-    image="results/day15_eval_20261028T162911_018421/pfn_vs_context.png")
+    image="results/day15_eval_masked_20261028T183604_691086/pfn_vs_context.png")
 
 content_slide("局限与边界", [
     b("合成任务：Δω 对 (a,b) 线性 + 高斯先验/噪声 → 贝叶斯有闭式解；真实世界模型更复杂"),
@@ -145,12 +156,11 @@ content_slide("局限与边界", [
     b("没有验证 PFN 预测在闭环 MPC 中的控制收益（下一步）"),
 ])
 
-content_slide("下一步与分工", [
+content_slide("下一步", [
     b("下一步：上下文世界模型 + MPC；多任务多步递推；PFN 预测方差用于风险控制"),
-    b("分工：动力学公式、任务采样、贝叶斯后验、高斯 NLL、训练循环由我编写；Transformer 结构、测试、评估脚本和归档为工程辅助"),
     b("所有数字取自 results/ 中归档 JSON；未使用 test 集；历史结果未覆盖"),
 ])
 
-path = OUT / "day15_xia_talk.pptx"
+path = OUT / ("day15_xia_talk_masked.pptx" if "--masked-output" in sys.argv else "day15_xia_talk.pptx")
 PRS.save(path)
 print(f"saved: {path}  ({len(PRS.slides.slides) if hasattr(PRS.slides,'slides') else len(PRS.slides._sldIdLst)} slides)")

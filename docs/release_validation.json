@@ -1,27 +1,53 @@
 {
   "date": "2026-10-28",
+  "initial_release": {
+    "date": "2026-10-28",
+    "tests": {
+      "command": "python -X utf8 -B -m pytest tests -q -p no:cacheprovider",
+      "passed": 77,
+      "warnings": 4,
+      "elapsed_seconds": 14.03,
+      "environment": "new isolated .venv; CPU torch 2.10.0+cpu",
+      "warning_reason": "pre-norm Transformer disables nested-tensor optimization"
+    },
+    "original_files_hashed_and_unchanged": 687,
+    "historical_results_hashed_and_unchanged": 169,
+    "unreadable_source_files": "one active PowerPoint lock file; not copied or modified",
+    "privacy_scan": {
+      "filename_findings": [],
+      "sensitive_text_findings": [],
+      "numeric_substring_matches": 37,
+      "non_numeric_substring_findings": []
+    },
+    "core_src_files_unchanged": true,
+    "training_performed": false,
+    "experiments_rerun": false,
+    "original_test_split_evaluated": false,
+    "ppt_included": false,
+    "archived_model_query_protocol": "unmasked joint self-attention; query features can interact; query labels excluded",
+    "publication_status": "prepared for user review; no commit or remote publication"
+  },
   "tests": {
     "command": "python -X utf8 -B -m pytest tests -q -p no:cacheprovider",
-    "passed": 77,
-    "warnings": 4,
-    "elapsed_seconds": 14.03,
-    "environment": "new isolated .venv; CPU torch 2.10.0+cpu",
+    "passed": 84,
+    "warnings": 9,
+    "elapsed_seconds": 3.61,
+    "environment": "existing isolated release .venv; CPU torch 2.10.0+cpu",
     "warning_reason": "pre-norm Transformer disables nested-tensor optimization"
   },
-  "original_files_hashed_and_unchanged": 687,
-  "historical_results_hashed_and_unchanged": 169,
-  "unreadable_source_files": "one active PowerPoint lock file; not copied or modified",
-  "privacy_scan": {
-    "filename_findings": [],
-    "sensitive_text_findings": [],
-    "numeric_substring_matches": 37,
-    "non_numeric_substring_findings": []
-  },
-  "core_src_files_unchanged": true,
-  "training_performed": false,
-  "experiments_rerun": false,
+  "training_performed": true,
+  "training_scope": "one approved masked PFN run; seed0, CPU single thread, Adam1e-3, 3000 steps; no tuning",
+  "masked_training": "results/day15_pfn_masked_20261028T183404_691538/metrics.json",
+  "four_method_eval": "results/day15_eval_masked_20261028T183604_691086/metrics.json",
+  "single_task_experiments_rerun": false,
   "original_test_split_evaluated": false,
+  "legacy_model_computation_unchanged": true,
+  "archived_model_query_protocol": {
+    "old": "unmasked joint self-attention, query features can interact",
+    "masked": "all tokens attend only prefix; K=0 prior token; query own features preserved via residual connection"
+  },
   "ppt_included": false,
-  "archived_model_query_protocol": "unmasked joint self-attention; query features can interact; query labels excluded",
-  "publication_status": "prepared for user review; no commit or remote publication"
+  "ppt_local_output": "presentation/day15_xia_talk_masked.pptx",
+  "ppt_note": "Original day15_xia_talk.pptx was locked by PowerPoint; saved revision under a separate name",
+  "publication_status": "revision prepared for user diff review; not committed or pushed"
 }

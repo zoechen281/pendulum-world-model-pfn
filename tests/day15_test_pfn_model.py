@@ -32,7 +32,7 @@ def test_nll_decreases_as_prediction_approaches():
     assert good < bad
 
 
-def test_forward_shapes_and_no_leakage_between_queries():
+def test_forward_shapes_and_query_permutation_equivariance():
     # 预测是推理时计算；train/eval 模式下 PyTorch 注意力走不同路径，
     # 置换等变性以 eval+no_grad 语义为准。
     model = _model()
