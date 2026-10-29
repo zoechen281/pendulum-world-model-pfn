@@ -152,6 +152,8 @@ K=32 时，掩码 PFN MSE=6.029104e-04，旧联合查询 PFN=5.558425e-04，贝�
 
 将 PFN 接入参数未知单摆的 MPC；研究多步误差和风险敏感规划；检验先验错配与非线性任务族；增加训练种子并评估校准。
 
+- 改进评估协议（受 SERPANT 启发）：将方法比较从"固定任务集、单次比较"改为序列式检验——随评估任务到达更新证据，证据充足即可停止；对多方法×多上下文长度的多次比较控制族错误率（FWER）；并按任务难度自适应分配评估预算。另探索"上下文收集的提前停止"：预测区间收窄到阈值即停止采集上下文。以上均为计划，未实现。
+
 ## 复现（Reproduce）
 
 Windows / Python 3.11 / CPU。以下命令供读者选择执行；本次仅补充了经同意的一次掩码 PFN 训练与同协议评价，未重跑单任务实验。
@@ -205,6 +207,7 @@ python -m venv .venv
 ## 参考文献（References）
 
 - Müller et al. [Transformers Can Do Bayesian Inference](https://arxiv.org/abs/2112.10510). ICLR 2022.
+- Gu, Sun, Gang, Xia. [Anytime-Valid Inference for Online Ranking of Large Language Models](https://openreview.net/forum?id=7Y8xRnGQ47). ICML 2026。
 - Nagler. [Statistical Foundations of Prior-Data Fitted Networks](https://proceedings.mlr.press/v202/nagler23a.html). ICML 2023.
 - Farama Foundation. [Gymnasium Pendulum 文档](https://gymnasium.farama.org/environments/classic_control/pendulum/).
 - Yue, Yang, Zhu. [DeltaPhi: Physical States Residual Learning for Neural Operators in Data-Limited PDE Solving](https://proceedings.neurips.cc/paper_files/paper/2025/hash/12bf28fb68f295f855a5bf0c5a217d6e-Abstract-Conference.html). NeurIPS 2025。仅作相关阅读；本项目的时间增量不等同于其解间残差。
